@@ -1,0 +1,41 @@
+name: CI Angular
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  teste node:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.15.0
+        
+    - name: Install dependencies
+      run: npm install
+  
+    - name: Run tests
+      run: npm run test:headless
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.15.0
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build
+      run: npm run build:prod
