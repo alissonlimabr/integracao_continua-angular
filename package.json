@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "testCI": "ng test --no-watch --no-progress --browsers=ChromeHeadless"
     "postinstall": "ng build --aot --prod"
   },
   "private": true,
