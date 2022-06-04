@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "https://webacademy-alisson.herokuapp.com/"
+  apiUrl: "https://localhost:9000"
 };
 
 /*
