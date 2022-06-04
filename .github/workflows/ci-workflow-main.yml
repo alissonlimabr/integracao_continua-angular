@@ -6,7 +6,7 @@ on:
     - main
 
 jobs:
-  teste node:
+  teste:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
