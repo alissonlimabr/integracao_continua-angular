@@ -1,9 +1,11 @@
 name: Deploy Heroku Alisson
 
 on:
-  schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch:
+  push:
+    branches:
+      - 'branch_alisson'
+  pull_request:
+  workflow_call:
      
 jobs:
 
